@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Card() {
-  const [jokes, setJokes] = useState([]);
+  const [jokes, setJokes] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -9,27 +9,23 @@ function Card() {
       try {
         const response = await fetch('https://api.blablagues.net/?rub=blagues');
         const data = await response.json();
-        setJokes(data);
-        console.log(data)
+        setJokes(data.data.content);
         setLoading(false);
       } catch (error) {
         console.error('Error when fetch data', error);
       }
     };
-
     fetchData();
-  }, []); // Le tableau vide signifie que cet effet ne dépend d'aucune variable, il s'exécute une seule fois après le rendu initial.
-
+  }, []); 
+console.log(jokes.text)
   return (
     <div>
       {loading ? (
         <p>Chargement...</p>
       ) : (
-        <ul>
-          {jokes.map((joke, index) => (
-            <li key={index}>{joke.joke}</li>
-          ))}
-        </ul>
+        <p>
+          {jokes.text}
+        </p>
       )}
     </div>
   );
