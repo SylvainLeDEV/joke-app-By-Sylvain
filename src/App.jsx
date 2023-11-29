@@ -1,14 +1,11 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BurgerMenu from "./components/burger-menu/BurgerMenu";
 import JokeCards from "./components/joke-cards/JokeCards";
 
 function App() {
   const [category, setCategory] = useState({});
+
 
 
   return (
@@ -19,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
-            // path={`/${category.slug}`}
             path={`/:${category.slug}`}
             element={<JokeCards category={category.slug} />}
           />
