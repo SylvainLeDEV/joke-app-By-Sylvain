@@ -5,7 +5,7 @@ import usePageLoadRedirect from "../../utils/redirect";
 import { categories } from "../../utils/categories";
 
 const BurgerMenu = ({ onCategorySelect }) => {
-  usePageLoadRedirect()
+  usePageLoadRedirect();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,15 +21,16 @@ const BurgerMenu = ({ onCategorySelect }) => {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className={`lg:hidden p-3 bg-gray-900`}>
       <button
         onClick={toggleMenu}
-        className={`burger-menu-button ${isOpen ? "open" : ""}`}
+        className={`burger-menu-button ${isOpen ? "open" : ""} my-2`}
       >
-        <span className={`block h-2 w-6 bg-gray-500 mb-1`}></span>
-        <span className={`block h-2 w-6 bg-gray-500 mb-1`}></span>
-        <span className={`block h-2 w-6 bg-gray-500`}></span>
+        <span className={`block h-2 w-6 bg-white mb-1`}></span>
+        <span className={`block h-2 w-6 bg-white mb-1`}></span>
+        <span className={`block h-2 w-6 bg-white`}></span>
       </button>
+
       {isOpen && (
         <div className={`burger-menu show`}>
           <ul>
