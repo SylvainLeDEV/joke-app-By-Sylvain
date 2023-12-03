@@ -1,8 +1,9 @@
-# React + Vite
+# App Joke 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I created a small app that allows consuming the API from : https://www.blablagues.net/apix.html  
+I did this just for fun and to have some jokes to tell at parties ;P
 
-Currently, two official plugins are available:
+I also did this to practice with ViteJS + ReactJS + Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Thanks to: [blagues.net](https://www.blablagues.net), who provides the API for free so that developers (junior and experienced) can benefit from it.
+
