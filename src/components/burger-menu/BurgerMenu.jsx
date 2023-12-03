@@ -21,7 +21,7 @@ const BurgerMenu = ({ onCategorySelect }) => {
   };
 
   return (
-    <div className={`lg:hidden p-3 bg-gray-900`}>
+    <div className={`lg:hidden p-3 bg-gray-900 flex items-center`}>
       <button
         onClick={toggleMenu}
         className={`burger-menu-button ${isOpen ? "open" : ""} my-2`}
@@ -30,6 +30,9 @@ const BurgerMenu = ({ onCategorySelect }) => {
         <span className={`block h-2 w-6 bg-white mb-1`}></span>
         <span className={`block h-2 w-6 bg-white`}></span>
       </button>
+      <div className={`w-11/12 text-center`}>
+        <h1 className={`text-white text-2xl`}>😂</h1>
+      </div>
 
       {isOpen && (
         <div className={`burger-menu show`}>

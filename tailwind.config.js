@@ -1,7 +1,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "card-color": "#B04949",
+      },
+    },
   },
   plugins: [],
 };

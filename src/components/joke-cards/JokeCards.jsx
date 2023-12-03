@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./JokeCards.css";
-import { useLocation } from "react-router-dom";
 
 const JokeCards = ({ category }) => {
   const [jokes, setJokes] = useState([]);
@@ -65,10 +64,10 @@ const JokeCards = ({ category }) => {
   }
 
   return (
-    <div className="joke-cards-container">
+    <div className={`joke-cards-container`}>
       <ul className="joke-list">
         {jokes.map((joke) => (
-          <li key={joke.data.id} className="joke-card">
+          <li key={joke.data.id} className={`joke-card  bg-card-color`}>
             <p>{joke.data.content.text_head}</p>
             {joke.data.content.text !== "" ? (
               <p>{joke.data.content.text}</p>

@@ -2,7 +2,7 @@ export const categories = [
   { id: 14, name: "Aléatoire", slug: "random" },
   { id: 1, name: "Belges", slug: "belges" },
   { id: 2, name: "Les perles 🤌", slug: "perles" },
-  { id: 10, name: "Religion", slug: "religion" },
+  { id: 15, name: "Religion", slug: "religion" },
   { id: 3, name: "Attrape-nigauds", slug: "attrape+nigauds" },
   { id: 4, name: "Blonde", slug: "blonde" },
   { id: 5, name: "Politique", slug: "politique" },
