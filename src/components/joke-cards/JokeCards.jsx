@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./JokeCards.css";
-import { useLocation } from "react-router-dom";
 
 const JokeCards = ({ category }) => {
   const [jokes, setJokes] = useState([]);
-  console.log(jokes)
+  console.log(jokes);
   const [loading, setLoading] = useState(true);
 
   const fetchJokesByCategory = async (category) => {
     try {
       const response = await fetch(
-        // `https://api.blablagues.net/?rub=blagues&nb=10`
-        `https://api.blablagues.net/?rub=blagues&cat=${category}&adu=1&day=0&nb=10`
+        category === "random"
+          ? `https://api.blablagues.net/?rub=blagues&nb=10`
+          : `https://api.blablagues.net/?rub=blagues&cat=${category}&adu=1&day=0&nb=10`
       );
       setLoading(false);
       const data = await response.json();
@@ -64,10 +64,10 @@ const JokeCards = ({ category }) => {
   }
 
   return (
-    <div className="joke-cards-container">
+    <div className={`joke-cards-container`}>
       <ul className="joke-list">
         {jokes.map((joke) => (
-          <li key={joke.data.id} className="joke-card">
+          <li key={joke.data.id} className={`joke-card  bg-card-color`}>
             <p>{joke.data.content.text_head}</p>
             {joke.data.content.text !== "" ? (
               <p>{joke.data.content.text}</p>
