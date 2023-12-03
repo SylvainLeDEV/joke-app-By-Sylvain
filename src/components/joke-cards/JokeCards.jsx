@@ -10,8 +10,8 @@ const JokeCards = ({ category }) => {
   const fetchJokesByCategory = async (category) => {
     try {
       const response = await fetch(
-        `https://api.blablagues.net/?rub=blagues&nb=10`
-        // `https://api.blablagues.net/?cat=${category}&adu=1&day=0&nb=10`
+        // `https://api.blablagues.net/?rub=blagues&nb=10`
+        `https://api.blablagues.net/?rub=blagues&cat=${category}&adu=1&day=0&nb=10`
       );
       setLoading(false);
       const data = await response.json();
