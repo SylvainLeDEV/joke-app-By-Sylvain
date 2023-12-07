@@ -10,7 +10,7 @@ const usePageLoadRedirect = () => {
       console.log('This is the initial load');
     } else {
       console.log('This is a page refresh');
-      navigate('/');
+      navigate('/joke-app-By-Sylvain');
     }
   }, []);
 };

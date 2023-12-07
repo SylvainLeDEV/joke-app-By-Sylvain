@@ -40,7 +40,7 @@ const BurgerMenu = ({ onCategorySelect }) => {
             {categories.map((category) => (
               <li key={category.id} className="mb-4">
                 <Link
-                  to={`/${category.slug}`}
+                  to={`/joke-app-By-Sylvain/${category.slug}`}
                   className="text-xl text-gray-700 font-semibold hover:text-gray-900"
                   onClick={() => handleCategoryClick(category.id)}
                 >
