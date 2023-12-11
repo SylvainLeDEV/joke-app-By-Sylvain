@@ -19,6 +19,7 @@ function App() {
             path={`/joke-app-By-Sylvain/:${category.slug}`}
             element={<JokeCards category={category.slug} />}
           />
+          <Route path="*" element={<Home />}></Route>
         </Routes>
       </Router>
     </div>
