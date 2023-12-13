@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 
 // -----
 import BurgerMenu from "./components/burger-menu/BurgerMenu";
@@ -8,7 +13,7 @@ import Home from "./components/home/Home";
 // -----
 function App() {
   const [category, setCategory] = useState({});
-
+  
   return (
     <div>
       <Router>

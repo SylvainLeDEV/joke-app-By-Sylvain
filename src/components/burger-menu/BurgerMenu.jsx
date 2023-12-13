@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./BurgerMenu.css";
-import usePageLoadRedirect from "../../utils/redirect";
+import {usePageLoadRedirect, useReturnAlwaysOnRadomJoke} from "../../utils/redirect";
 import { categories } from "../../utils/categories";
 
 const BurgerMenu = ({ onCategorySelect }) => {
   usePageLoadRedirect();
+  useReturnAlwaysOnRadomJoke();
 
   const [isOpen, setIsOpen] = useState(false);
 
