@@ -24,7 +24,7 @@ function App() {
             path={`/joke-app-By-Sylvain/:${category.slug}`}
             element={<JokeCards category={category.slug} />}
           />
-          <Route path="*" element={<Navigate to="/joke-app-By-Sylvain" />}></Route>
+          <Route path="*" element={<Navigate to="/joke-app-By-" />}></Route>
         </Routes>
       </Router>
     </div>
