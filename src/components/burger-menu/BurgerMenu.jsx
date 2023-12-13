@@ -5,9 +5,6 @@ import {usePageLoadRedirect, useReturnAlwaysOnRadomJoke} from "../../utils/redir
 import { categories } from "../../utils/categories";
 
 const BurgerMenu = ({ onCategorySelect }) => {
-  usePageLoadRedirect();
-  useReturnAlwaysOnRadomJoke();
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
