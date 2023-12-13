@@ -6,6 +6,9 @@ const JokeCards = ({ category }) => {
   const [jokes, setJokes] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  usePageLoadRedirect();
+  useReturnAlwaysOnRadomJoke();
+
   const fetchJokesByCategory = async (category) => {
     try {
       const response = await fetch(
@@ -48,8 +51,6 @@ const JokeCards = ({ category }) => {
   };
   useEffect(() => {
     if (category) {
-      usePageLoadRedirect();
-      useReturnAlwaysOnRadomJoke();
       setJokes([]);
       setLoading(true);
       fetchJokesByCategory(category);
