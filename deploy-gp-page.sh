@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Error : Add message commit in arg"
+  exit 1
+fi
+
 echo "------------------"
 echo "----- BUILD ------"
 echo "------------------"
@@ -17,7 +23,7 @@ git add .
 echo "-------------------"
 echo "----- Commit ------"
 echo "-------------------"
-git commit -m "test redirect" &&
+git commit -m "$1" &&
 
 echo "------------------"
 echo "----- PUSH -------"

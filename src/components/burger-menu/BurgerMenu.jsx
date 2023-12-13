@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./BurgerMenu.css";
 import {usePageLoadRedirect, useReturnAlwaysOnRadomJoke} from "../../utils/redirect";
 import { categories } from "../../utils/categories";
