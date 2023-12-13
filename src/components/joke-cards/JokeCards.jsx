@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./JokeCards.css";
-import { usePageLoadRedirect, useReturnAlwaysOnRadomJoke } from "../../utils/redirect";
 
 const JokeCards = ({ category }) => {
   const [jokes, setJokes] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  usePageLoadRedirect();
-  useReturnAlwaysOnRadomJoke();
 
   const fetchJokesByCategory = async (category) => {
     try {

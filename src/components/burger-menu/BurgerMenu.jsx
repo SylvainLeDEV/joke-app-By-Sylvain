@@ -7,6 +7,9 @@ import { categories } from "../../utils/categories";
 const BurgerMenu = ({ onCategorySelect }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  usePageLoadRedirect();
+  useReturnAlwaysOnRadomJoke();
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
