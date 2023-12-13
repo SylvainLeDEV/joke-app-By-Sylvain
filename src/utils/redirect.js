@@ -9,7 +9,7 @@ export const usePageLoadRedirect = () => {
     if (localStorage.getItem("firstLoadDone") === null) {
       localStorage.setItem("firstLoadDone", "1");
     } else {
-      navigate("*");
+      navigate("/joke-app-By-Sylvain");
     }
   }, []);
 };
