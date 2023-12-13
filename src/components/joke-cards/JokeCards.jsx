@@ -3,7 +3,6 @@ import "./JokeCards.css";
 
 const JokeCards = ({ category }) => {
   const [jokes, setJokes] = useState([]);
-  console.log(jokes);
   const [loading, setLoading] = useState(true);
 
   const fetchJokesByCategory = async (category) => {

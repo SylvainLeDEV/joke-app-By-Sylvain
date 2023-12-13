@@ -1,18 +1,31 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { categories } from "./categories";
 
-const usePageLoadRedirect = () => {
+export const usePageLoadRedirect = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (localStorage.getItem('firstLoadDone') === null) {
-      localStorage.setItem('firstLoadDone', '1');
-      console.log('This is the initial load');
+    if (localStorage.getItem("firstLoadDone") === null) {
+      localStorage.setItem("firstLoadDone", "1");
     } else {
-      console.log('This is a page refresh');
-      navigate('/');
+      navigate("/joke-app-By-Sylvain");
     }
   }, []);
 };
+export const useReturnAlwaysOnRadomJoke = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const currentPath = window.location.pathname;
 
-export default usePageLoadRedirect;
+    const baseUrl = "/joke-app-By-Sylvain";
+    if (!currentPath.startsWith(baseUrl)) {
+      navigate(baseUrl);
+    } else {
+      const categorySlug = currentPath.substring(baseUrl.length + 1);
+      if (!categories.some((category) => category.slug === categorySlug)) {
+        navigate(baseUrl);
+      }
+    }
+  }, [navigate]);
+};

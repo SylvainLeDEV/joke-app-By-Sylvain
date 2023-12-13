@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./BurgerMenu.css";
-import usePageLoadRedirect from "../../utils/redirect";
+import {usePageLoadRedirect, useReturnAlwaysOnRadomJoke} from "../../utils/redirect";
 import { categories } from "../../utils/categories";
 
 const BurgerMenu = ({ onCategorySelect }) => {
-  usePageLoadRedirect();
-
   const [isOpen, setIsOpen] = useState(false);
+
+  usePageLoadRedirect();
+  useReturnAlwaysOnRadomJoke();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -40,7 +41,7 @@ const BurgerMenu = ({ onCategorySelect }) => {
             {categories.map((category) => (
               <li key={category.id} className="mb-4">
                 <Link
-                  to={`/${category.slug}`}
+                  to={`/joke-app-By-Sylvain/${category.slug}`}
                   className="text-xl text-gray-700 font-semibold hover:text-gray-900"
                   onClick={() => handleCategoryClick(category.id)}
                 >
